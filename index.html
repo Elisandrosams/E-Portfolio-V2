@@ -6,7 +6,17 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/9169ad0fbb.js" crossorigin="anonymous"></script>
     <title>Elisandro Sams</title>
-
+    <script src="index.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "084wJD2VQpANrjed5",
+      });
+   })();
+</script>
 </head>
 <body>
     <section id="landing-page">
@@ -73,6 +83,131 @@
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
+        <div class="modal">
+           <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__subtitle modal__subtitle--about">Frontend Software Engineer.</h4>
+                <p class="modal__para">
+                    I'm a 34-year-old <b class="green">frontend software engineer</b> with a passion for building web applications that provide great <b class="green">user experiences</b>. <br>
+                    I am really good at figuring out how to <b class="green">solve problems</b> and debug code, and I have a strong desire to <b class="green">learn and grow</b> as a developer.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" alt="HTML logo">
+                        <span class="modal__language--name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS logo">
+                        <span class="modal__language--name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript logo">
+                        <span class="modal__language--name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React logo">
+                        <span class="modal__language--name">React</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://toppng.com/uploads/preview/python-logo-11609373642q9ewsev5ea.png" alt="Python logo">
+                        <span class="modal__language--name">Python</span>
+                    </figure>
+                </div>
+           </div> 
+           <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+                <h4 class="modal__subtitle modal__subtitle--contact">I am currently open to new opportunities.</h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit"class="form__submit">Send it my way</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for reaching out! Looking forward to connecting with you soon.
+                </div>
+           </div>
+           <i class="fa-solid fa-xmark modal__close click"></i>
+        </div>
     </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">Here are some of my <span class="green">projects</span></h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="assets/techbeetle cartography.jpeg" alt="TechBeetle Cartography" class="project__image">
+                            <div class="project__wrapper--background">
+                                <div class="project__description">
+                                    <h3 class="project__description--title">TechBeetle Cartography</h3>
+                                    <h4 class="project__description--subtitle">HTML, CSS, JavaScript</h4>
+                                    <p class="project__description--para">A web application for sharing TTRPG maps that I have created.</p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/Elisandrosams/TechBeetle-Cartography.git" target="_blank" class="project__description--link click">
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                        <a href="https://elisandrosams.github.io/TechBeetle-Cartography/" target="_blank" class="project__description--link click">
+                                        <i class="fa-solid fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <img src="assets/Personal Logo.png" alt="Elisandro Sams" class="footer__logo">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="https://www.linkedin.com/in/elisandro-sams-b37324154" target="_blank" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/Elisandrosams" target="_blank" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white">
+                        GitHub
+                    </a>
+                    <a href="#" target="_blank" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white">
+                        Contact
+                    </a>
+                    <a href="assets/Elisandro (Alex) Sams.pdf" target="_blank" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white">
+                        Resume
+                    </a>
+                </div>
+                <div class="footer__copyright">
+                    &copy; 2026 Elisandro Sams. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
