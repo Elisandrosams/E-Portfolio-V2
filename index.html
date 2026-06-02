@@ -19,35 +19,28 @@
 </script>
 </head>
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                <img id= "personal-logo" src="assets/Personal Logo.png" alt="personal logo image"> 
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
-                    <a href="#" class="
-                        nav__link--anchor
-                        link__hover-effect
-                        link__hover-effect--black
-                        ">About</a>
-                </li>
-                <li class="nav__link">
-                    <a href=""class="
+                    <a href="#projects"class="
                         nav__link--anchor
                         link__hover-effect
                         link__hover-effect--black
                         ">Projects</a>
                 </li>
-                <li class="nav__link">
-                    <a href=""class="
+                <li class="nav__link" onclick="toggleModal()">
+                    <a  href="#" class="
                         nav__link--anchor
                         link__hover-effect
                         link__hover-effect--black
                         ">Contact</a>
                 </li>
-                <li class="nav__link click">
-                    <a href=""class="
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#"class="
                         nav__link--anchor
                         link__hover-effect
                         link__hover-effect--black
@@ -58,11 +51,11 @@
         </nav>
         <header class="header">
             <div class="header__content">
-                <h1 class="title">Hey</h1>
-                <h1 class="title green">I'm Elisandro.</h1>
+                <h1 class="title">Hey
+                <span class="green">I'm Elisandro.</span></h1>
                 <p class="header__para">
                     I'm a <b class="green">Software Engineer</b> with a strong passion for building web applications with great user experiences. <br>
-                    Here's a bit more <b class="green">about me</b>.
+                    Here's a bit more <b class="green click" onclick="toggleModal()">about me</b>.
                 </p>
                 <div class="social__list">
                     <a href="https://www.linkedin.com/in/elisandro-sams-b37324154" target="_blank" class="social__link click">
@@ -77,7 +70,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fa-regular fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -115,6 +108,7 @@
                 </div>
            </div> 
            <div class="modal__half modal__contact">
+            <i class="fa-solid fa-xmark modal__close click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
                 <h4 class="modal__subtitle modal__subtitle--contact">I am currently open to new opportunities.</h4>
                 <form id="contact__form" onsubmit="contact(event)">
@@ -139,8 +133,16 @@
                     Thanks for reaching out! Looking forward to connecting with you soon.
                 </div>
            </div>
-           <i class="fa-solid fa-xmark modal__close click"></i>
         </div>
+        <img src="" class="shape bug-0">
+        <img src="" class="shape bug-1">
+        <img src="" class="shape bug-2">
+        <img src="" class="shape bug-3">
+        <img src="" class="shape bug-4">
+        <img src="" class="shape bug-5">
+        <img src="" class="shape bug-6">
+        <img src="" class="shape bug-7">
+        <img src="" class="shape bug-8">
     </section>
     <section id="projects">
         <div class="container">
@@ -175,7 +177,9 @@
         <div class="container">
             <div class="row footer__row">
                 <figure>
+                    <a href="#" class="click">
                     <img src="assets/Personal Logo.png" alt="Elisandro Sams" class="footer__logo">
+                    </a>
                 </figure>
                 <div class="footer__social--list">
                     <a href="https://www.linkedin.com/in/elisandro-sams-b37324154" target="_blank" class="
@@ -190,7 +194,8 @@
                         link__hover-effect--white">
                         GitHub
                     </a>
-                    <a href="#" target="_blank" class="
+                    <a href="#" onclick="toggleModal()"
+                        class="
                         footer__social--link
                         link__hover-effect
                         link__hover-effect--white">
